@@ -6,6 +6,8 @@ email: aqwly2ea@duck.com
 import streamlit as st
 import numpy as np
 
+import io
+from PIL import Image
 from joblib import load
 
 from PreProcessor import PreProcessor
@@ -27,13 +29,17 @@ if uploaded_file is not None:
 	bytestr = np.frombuffer(uploaded_file.getvalue(), np.uint8)
 else:
 	im = open('randomimg.tif', 'rb')
-	bytestr = im.read()
+	bytestream = im.read()
+	bytestr = np.frombuffer(bytestream, np.uint8)
+
+	image = Image.open(io.BytesIO(bytestream))
+	st.image(image, caption='Example Image. Try your own!')
+
 
 preproc = PreProcessor(is_dataset=False)
 
 with st.spinner('processing image data...'):
 	preproc.process_datapoints(bytestr)
-
 	X = preproc.get_data()
 
 with st.spinner('making predictions...'):
