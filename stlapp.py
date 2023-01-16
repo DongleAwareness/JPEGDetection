@@ -5,10 +5,10 @@ email: aqwly2ea@duck.com
 
 import streamlit as st
 import numpy as np
+from joblib import load
 
 import io
 from PIL import Image
-from joblib import load
 
 from PreProcessor import PreProcessor
 

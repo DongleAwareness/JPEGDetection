@@ -1,6 +1,5 @@
 from scipy.fftpack import dct
 import numpy as np
-
 from cv2 import imread, imencode, imdecode, cvtColor, IMREAD_COLOR, IMWRITE_JPEG_QUALITY, COLOR_BGR2YCrCb
 
 
