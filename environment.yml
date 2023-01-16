@@ -7,9 +7,6 @@ dependencies:
   - joblib
   - numpy
   - scipy
-  - opencv
-  - pip:
-    - opencv-python
-    - scikit-learn
-    - sklearn==0.0
-    - streamlit
+  - opencv-python
+  - scikit-learn
+  - streamlit
