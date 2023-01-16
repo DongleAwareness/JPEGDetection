@@ -3,9 +3,11 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - python=3.7
   - joblib
   - numpy
   - scipy
+  - opencv
   - pip:
     - opencv-python
     - scikit-learn
