@@ -1,8 +1,0 @@
-name: quantstl
-dependencies:
-  - python=3.7
-  - joblib
-  - numpy
-  - scipy
-  - opencv
-  - scikit-learn
