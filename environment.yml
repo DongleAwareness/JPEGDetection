@@ -1,7 +1,4 @@
 name: quantstl
-channels:
-  - conda-forge
-  - defaults
 dependencies:
   - python=3.7
   - joblib
