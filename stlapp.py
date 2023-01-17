@@ -5,15 +5,15 @@ email: aqwly2ea@duck.com
 
 import streamlit as st
 import numpy as np
-from joblib import load
+from pickle import load
 
 import io
 from PIL import Image
 
 from PreProcessor import PreProcessor
 
-
-clf = load('HGBDT-JPEG95-ACC99-73FEAT.jlb')
+with open('HGBDT-JPEG95-ACC99-73FEAT.sav', "rb") as f:
+	clf = load(f)
 
 with st.sidebar:
 	st.subheader('Test Your Own Image')
