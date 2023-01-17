@@ -1,6 +1,6 @@
 from scipy.fftpack import dct
 import numpy as np
-from cv2 import imread, imencode, imdecode, cvtColor, IMREAD_COLOR, IMWRITE_JPEG_QUALITY, COLOR_BGR2YCrCb
+from cv2 import imdecode, cvtColor, IMREAD_COLOR, COLOR_BGR2YCrCb
 
 
 def get_lead_digit(number):
@@ -119,7 +119,7 @@ class PreProcessor:
 
         #print(f'processing image')
 
-        image = imdecode(myimgbytes, IMREAD_COLOR)#imread(myimg, IMREAD_COLOR)
+        image = imdecode(myimgbytes, IMREAD_COLOR)
         self.myimg = image
         self.imshape = image.shape
 
