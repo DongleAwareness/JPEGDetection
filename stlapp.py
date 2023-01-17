@@ -20,8 +20,7 @@ with st.sidebar:
 	uploaded_file = st.file_uploader("Choose a file", type=['tif', 'jpg', 'png'])
 
 st.title('Quantization Detection')
-st.caption('Quantization is a process applied to an image during the JFIF (aka JPEG) Compression process')
-
+st.caption('Quantization is a process applied to an image during the JFIF (aka JPEG) Compression process. [See Detailed Writeup](https://gist.githubusercontent.com/DongleAwareness/2b9364adab7323a9da3a67240e334546/raw/e83b1710bf253690a7db06274a51af7c57523a7b/Quantization%2520Detection%2520Writeup)')
 
 if uploaded_file is not None:
 	st.image(uploaded_file, caption='Input Image')
@@ -65,9 +64,3 @@ with st.spinner('generating mask...'):
 
 st.success('Quantization Mask Generated!')
 st.image(final_mask, caption='JPEG Output Mask (edits in white)')
-
-
-with st.expander("See Paper and Description"):
-	with open('Quantization Detection Writeup.md', 'r') as f:
-		doc = f.read()
-	st.markdown(doc)
