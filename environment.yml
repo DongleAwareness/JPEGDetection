@@ -6,4 +6,3 @@ dependencies:
   - scipy
   - opencv
   - scikit-learn
-  - streamlit
