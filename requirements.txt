@@ -1,5 +1,6 @@
+streamlit
 joblib
 numpy
 scipy
-opencv-python-headless
-scikit-learn
+opencv-python
+scikit-learn==1.0.2
