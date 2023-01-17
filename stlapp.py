@@ -19,6 +19,8 @@ with st.sidebar:
 	st.subheader('Test Your Own Image')
 	uploaded_file = st.file_uploader("Choose a file", type=['tif', 'jpg', 'png'])
 
+	st.write("The aim of this program is to create an image mask for some given input image. The image mask outlines where in the original images there may have been some image manipulation or previous JPEG compression (in white). It uses a Histogram Boosted Gradient Decision Tree Trained using a variation of the [Columbia Uncompressed Image Splicing Detection Dataset](https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/dlform.html)")
+
 st.title('Quantization Detection')
 st.caption('Quantization is a process applied to an image during the JFIF (aka JPEG) Compression process. [See Detailed Writeup](https://gist.githubusercontent.com/DongleAwareness/2b9364adab7323a9da3a67240e334546/raw/e83b1710bf253690a7db06274a51af7c57523a7b/Quantization%2520Detection%2520Writeup)')
 
