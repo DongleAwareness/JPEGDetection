@@ -68,6 +68,6 @@ st.image(final_mask, caption='JPEG Output Mask (edits in white)')
 
 
 with st.expander("See Paper and Description"):
-	with open('Quantization Detection Writeup.txt') as f:
+	with open('Quantization Detection Writeup.md', 'r') as f:
 		doc = f.read()
 	st.markdown(doc)
