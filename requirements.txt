@@ -2,4 +2,5 @@ joblib
 numpy
 scipy
 opencv-python
+opencv
 scikit-learn
